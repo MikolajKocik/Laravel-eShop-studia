@@ -3,6 +3,7 @@
 @section('tytul') Lista Produktów @endsection
 
 @section('tresc')
+<<<<<<< HEAD
     <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold">Produkty w sklepie</h1>
         <a href="{{ route('products.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">Dodaj produkt</a>
