@@ -1,5 +1,4 @@
 @extends('layout')
-<<<<<<< HEAD
 
 @section('tytul') Dodaj Nowy Produkt @endsection
 
@@ -23,7 +22,6 @@
                 @endforeach
             </select>
         </div>
-<<<<<<< HEAD
 
         <div>
             <label class="block mb-1">Cena (zł):</label>

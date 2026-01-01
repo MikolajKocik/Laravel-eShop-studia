@@ -25,7 +25,6 @@
             </select>
         </div>
 
-<<<<<<< HEAD
         <div>
             <label class="block mb-1">Cena:</label>
             <input type="number" step="0.01" name="price" value="{{ $product->price }}" class="w-full border rounded p-2">
