@@ -5,7 +5,9 @@
 @section('tresc')
     <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold">Produkty w sklepie</h1>
-        <a href="{{ route('products.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">Dodaj produkt</a>
+        @if(auth()->user()->is_admin)
+            <a href="{{ route('products.create') }}" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">Dodaj produkt</a>
+        @endif
     </div>
 
     @if(session('message'))
@@ -32,14 +34,18 @@
                     </td>
                     <td class="border border-gray-300 p-2 font-bold">{{ $product->price }} zł</td>
                     <td class="border border-gray-300 p-2 flex justify-center gap-2">
+                        <a href="{{ route('cart.add', $product->id) }}" class="bg-green-500 text-white px-2 py-1 rounded text-sm">Do koszyka</a>
                         <a href="{{ route('products.show', $product->id) }}" class="bg-blue-400 text-white px-2 py-1 rounded text-sm">Pokaż</a>
-                        <a href="{{ route('products.edit', $product->id) }}" class="bg-yellow-500 text-white px-2 py-1 rounded text-sm">Edytuj</a>
                         
-                        <form action="{{ route('products.destroy', $product->id) }}" method="POST" onsubmit="return confirm('Czy na pewno chcesz usunąć ten produkt?')">
-                            @csrf
-                            @method('DELETE') 
-                            <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded text-sm">Usuń</button>
-                        </form>
+                        @if(auth()->user()->is_admin)
+                            <a href="{{ route('products.edit', $product->id) }}" class="bg-yellow-500 text-white px-2 py-1 rounded text-sm">Edytuj</a>
+                            
+                            <form action="{{ route('products.destroy', $product->id) }}" method="POST" onsubmit="return confirm('Czy na pewno chcesz usunąć ten produkt?')">
+                                @csrf
+                                @method('DELETE') 
+                                <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded text-sm">Usuń</button>
+                            </form>
+                        @endif
                     </td>
                 </tr>
             @endforeach

@@ -15,6 +15,15 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.*')">
+                        {{ __('Produkty') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('orders.index')" :active="request()->routeIs('orders.*')">
+                        {{ __('Moje Zamówienia') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('cart.index')" :active="request()->routeIs('cart.*')">
+                        {{ __('Koszyk') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -70,8 +79,8 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('products.index')" :active="request()->routeIds('products.*')">
-                {{ __('Sklep / Produkty') }}
+            <x-responsive-nav-link :href="route('products.index')" :active="request()->routeIs('products.*')">
+                {{ __('Produkty') }}
             </x-responsive-nav-link>
         </div>
 
