@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Models\Product;
-use \App\Models\Category;
+use App\Http\Requests\ProductRequest;
+use App\Models\Product;
+use App\Models\Category;
 
 class ProductController extends Controller
 {
@@ -29,16 +30,9 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|min:3',
-            'price' => 'required|numeric',
-            'category_id' => 'required',
-            'description' => 'required'
-        ]);
-
-        Product::create($validated);
+        Product::create($request->validated());
         return redirect()->route('products.index')->with('message', 'Dodano produkt!');
     }
 
@@ -65,18 +59,11 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ProductRequest $request, string $id)
     {
         $product = Product::findOrFail($id);
 
-        $validated = $request->validate([
-            'name' => 'required|min:3',
-            'price' => 'required|numeric',
-            'category_id' => 'required',
-            'description' => 'required'
-        ]);
-
-        $product->update($validated);
+        $product->update($request->validated());
         
         return redirect()->route('products.index')->with('message', 'Uaktualniono produkt');
     }
