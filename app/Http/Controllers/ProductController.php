@@ -68,7 +68,15 @@ class ProductController extends Controller
     public function update(Request $request, string $id)
     {
         $product = Product::findOrFail($id);
-        $product->update($request->all());
+
+        $validated = $request->validate([
+            'name' => 'required|min:3',
+            'price' => 'required|numeric',
+            'category_id' => 'required',
+            'description' => 'required'
+        ]);
+
+        $product->update($validated);
         
         return redirect()->route('products.index')->with('message', 'Uaktualniono produkt');
     }
