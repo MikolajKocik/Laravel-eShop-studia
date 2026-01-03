@@ -1,8 +1,8 @@
 @extends('layout')
 
-@section('tytul') Twój Koszyk @endsection
+@section('title') Twój Koszyk @endsection
 
-@section('tresc')
+@section('body')
     <h1 class="text-2xl font-bold mb-6">Twój Koszyk</h1>
 
     @if(session('message'))

@@ -1,8 +1,10 @@
 @extends('layout')
 
-@section('tytul') Lista Produktów @endsection
+@section('title') 
+    Lista Produktów 
+@endsection
 
-@section('tresc')
+@section('body')
     <div class="flex justify-between items-center mb-6">
         <h1 class="text-2xl font-bold">Produkty w sklepie</h1>
         @if(auth()->user()->is_admin)

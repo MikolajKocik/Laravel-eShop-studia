@@ -1,8 +1,10 @@
 @extends('layout')
 
-@section('tytul') Edycja: {{ $product->name }} @endsection
+@section('title') 
+    Edycja: {{ $product->name }} 
+@endsection
 
-@section('tresc')
+@section('body')
     <h1 class="text-xl font-bold mb-4">Edytuj dane produktu</h1>
 
     <form action="{{ route('products.update', $product->id) }}" method="POST" class="max-w-lg space-y-4">

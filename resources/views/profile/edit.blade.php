@@ -1,8 +1,10 @@
 @extends('layout')
 
-@section('tytul') Edycja Profilu @endsection
+@section('title') 
+    Edycja Profilu 
+@endsection
 
-@section('tresc')
+@section('body')
     <h1 class="text-2xl font-bold mb-6">Edycja Profilu</h1>
 
     <div class="space-y-6">

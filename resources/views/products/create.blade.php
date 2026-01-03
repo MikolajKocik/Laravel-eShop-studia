@@ -1,8 +1,10 @@
 @extends('layout')
 
-@section('tytul') Dodaj Nowy Produkt @endsection
+@section('title') 
+    Dodaj Nowy Produkt 
+@endsection
 
-@section('tresc')
+@section('body')
     <h1 class="text-xl font-bold mb-4">Dodawanie produktu</h1>
 
     <form action="{{ route('products.store') }}" method="POST" class="max-w-lg space-y-4">

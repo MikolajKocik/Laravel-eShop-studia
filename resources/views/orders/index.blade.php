@@ -1,8 +1,10 @@
 @extends('layout')
 
-@section('tytul') Moje Zamówienia @endsection
+@section('title') 
+    Moje Zamówienia 
+@endsection
 
-@section('tresc')
+@section('body')
     <h1 class="text-2xl font-bold mb-6">Moje Zamówienia</h1>
 
     @if(session('message'))

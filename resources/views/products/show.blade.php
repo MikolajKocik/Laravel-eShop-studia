@@ -1,8 +1,10 @@
 @extends('layout')
 
-@section('tytul') {{ $product->name }} @endsection
+@section('title') 
+    {{ $product->name }} 
+@endsection
 
-@section('tresc')
+@section('body')
     <div class="max-w-2xl bg-white shadow-lg rounded-lg overflow-hidden border">
         <div class="bg-gray-100 px-6 py-4 border-b">
             <h1 class="text-2xl font-bold text-gray-800">{{ $product->name }}</h1>

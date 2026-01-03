@@ -1,11 +1,13 @@
 @extends('layout')
 
-@section('tytul') Strona Główna @endsection
+@section('title') 
+    Strona Główna 
+@endsection
 
-@section('tresc')
+@section('body')
     <!-- Hero Section -->
     <div class="text-center py-12 bg-gray-50 rounded-lg mb-12">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">Witaj w naszym sklepie!</h1>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Witamy w eShop!</h1>
         <p class="text-xl text-gray-600 mb-8">Najlepsze produkty w najniższych cenach. Sprawdź naszą ofertę już dziś.</p>
         <a href="{{ route('products.index') }}" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
             Rozpocznij Zakupy
@@ -15,17 +17,14 @@
     <!-- Features Section -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center">
         <div class="p-6 border rounded-lg shadow-sm">
-            <div class="text-blue-600 text-4xl mb-4">🚀</div>
             <h3 class="font-bold text-lg mb-2">Szybka Dostawa</h3>
             <p class="text-gray-600">Wysyłamy zamówienia w ciągu 24 godzin.</p>
         </div>
         <div class="p-6 border rounded-lg shadow-sm">
-            <div class="text-blue-600 text-4xl mb-4">💎</div>
             <h3 class="font-bold text-lg mb-2">Najwyższa Jakość</h3>
             <p class="text-gray-600">Gwarantujemy jakość naszych produktów.</p>
         </div>
         <div class="p-6 border rounded-lg shadow-sm">
-            <div class="text-blue-600 text-4xl mb-4">🛡️</div>
             <h3 class="font-bold text-lg mb-2">Bezpieczne Zakupy</h3>
             <p class="text-gray-600">Twoje dane są u nas w pełni bezpieczne.</p>
         </div>
