@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\UpdateProductRequest;
 use App\Http\Requests\StoreProductRequest;
 use App\Models\Product;
 use App\Models\Category;
@@ -33,7 +33,10 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         Product::create($request->validated());
-        return redirect()->route('products.index')->with('message', 'Dodano produkt!');
+
+        return redirect()->route('products.index')
+            ->with('message','Dodano produkt!')
+            ->with('color', 'green');
     }
 
     /**
@@ -42,7 +45,6 @@ class ProductController extends Controller
     public function show(string $id)
     {
         $product = Product::with('category')->findOrFail($id);
-
         return view('products.show', compact('product'));
     }
 
@@ -59,20 +61,15 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateProductRequest $request, string $id)
     {
         $product = Product::findOrFail($id);
 
-        $validated = $request->validate([
-            'name' => 'required|min:3',
-            'price' => 'required|numeric',
-            'category_id' => 'required',
-            'description' => 'required'
-        ]);
-
-        $product->update($validated);
+        $product->update($request->validated());
         
-        return redirect()->route('products.index')->with('message', 'Uaktualniono produkt');
+        return redirect()->route('products.index')
+            ->with('message', 'Uaktualniono produkt!')
+            ->with('color', 'yellow');
     }
 
     /**
@@ -83,6 +80,8 @@ class ProductController extends Controller
         $product = Product::findOrFail($id);
         $product->delete();
 
-        return redirect()->route('products.index');
+        return redirect()->route('products.index')
+            ->with('message', "Produkt usunięto pomyślnie!")
+            ->with('color', 'red');
     }
 }
