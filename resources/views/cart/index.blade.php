@@ -25,27 +25,24 @@
             <tbody>
                 @foreach(session('cart') as $id => $details)
                     <tr rowId="{{ $id }}">
-                        <td class="border border-gray-300 p-2">
+                        <td class="border border-gray-300 p-4">
                             <div class="flex items-center gap-4">
-                                @if(isset($details['image']))
-                                    <img src="{{ $details['image'] }}" class="w-16 h-16 object-cover" />
-                                @endif
-                                <span>{{ $details['name'] }}</span>
+                                <span class="font-semibold text-lg">{{ $details['name'] }}</span>
                             </div>
                         </td>
-                        <td class="border border-gray-300 p-2">{{ $details['price'] }} zł</td>
-                        <td class="border border-gray-300 p-2">
+                        <td class="border border-gray-300 p-4 text-center">{{ $details['price'] }} zł</td>
+                        <td class="border border-gray-300 p-4">
                             <div class="flex items-center justify-center">
                                 {{ $details['quantity'] }}
                             </div>
                         </td>
-                        <td class="border border-gray-300 p-2 text-center">{{ $details['price'] * $details['quantity'] }} zł</td>
-                        <td class="border border-gray-300 p-2 text-center">
+                        <td class="border border-gray-300 p-4 text-center font-bold">{{ $details['price'] * $details['quantity'] }} zł</td>
+                        <td class="border border-gray-300 p-4 text-center">
                             <form action="{{ route('cart.remove') }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <input type="hidden" name="id" value="{{ $id }}">
-                                <button type="submit" class="text-red-600 hover:text-red-900">Usuń</button>
+                                <button type="submit" class="text-red-600 hover:text-red-900 font-semibold">Usuń</button>
                             </form>
                         </td>
                     </tr>

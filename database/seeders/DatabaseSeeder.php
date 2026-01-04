@@ -16,14 +16,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // Create Categories
-        $elektronika = Category::create(['name' => 'Elektronika']);
-        $odziez = Category::create(['name' => 'Odzież']);
-        $ksiazki = Category::create(['name' => 'Książki']);
+        $electronic = Category::create(['name' => 'Elektronika']);
+        $clouthes = Category::create(['name' => 'Odzież']);
+        $books = Category::create(['name' => 'Książki']);
 
         // Create Products
-        Product::factory(5)->create(['category_id' => $elektronika->id]);
-        Product::factory(5)->create(['category_id' => $odziez->id]);
-        Product::factory(5)->create(['category_id' => $ksiazki->id]);
+        Product::factory(20)->create(['category_id' => $electronic->id]);
+        Product::factory(20)->create(['category_id' => $clouthes->id]);
+        Product::factory(20)->create(['category_id' => $books->id]);
 
         // Create Admin User
         User::factory()->create([
