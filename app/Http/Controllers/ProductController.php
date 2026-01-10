@@ -6,6 +6,8 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Http\Requests\StoreProductRequest;
 use App\Models\Product;
 use App\Models\Category;
+use Illuminate\Http\Request;
+
 
 class ProductController extends Controller
 {
@@ -23,20 +25,32 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('name')->get();
+
         return view('products.create', compact('categories'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreProductRequest $request)
+    public function store(Request $request)
     {
-        Product::create($request->validated());
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'category_id' => ['required', 'exists:categories,id'],
+            'price' => ['required', 'numeric', 'min:1'],
+            'description' => ['required', 'string', 'min:30'],
+        ], [
+            'price.gt' => 'Cena musi być większa od 0.',
+            'price.required' => 'Dodaj odpowiednią cenę.',
+            'description.min' => 'Opis musi mieć co najmniej 30 znaków.',
+        ]);
 
-        return redirect()->route('products.index')
-            ->with('message','Dodano produkt!')
-            ->with('color', 'green');
+        Product::create($validated);
+
+        return redirect()
+            ->route('products.index')
+            ->with('message', 'Produkt został dodany.');
     }
 
     /**
@@ -53,7 +67,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        $product = Product::findOrFail($id); 
+        $product = Product::findOrFail($id);
         $categories = Category::all();
         return view('products.edit', compact('product', 'categories'));
     }
@@ -61,15 +75,27 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateProductRequest $request, string $id)
+    public function update(Request $request, string $id)
     {
         $product = Product::findOrFail($id);
 
-        $product->update($request->validated());
-        
-        return redirect()->route('products.index')
-            ->with('message', 'Uaktualniono produkt!')
-            ->with('color', 'yellow');
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'category_id' => ['required', 'exists:categories,id'],
+            'price' => ['required', 'numeric', 'min:1'],
+            'description' => ['required', 'string', 'min:30'],
+        ], [
+            'price.required' => 'Podaj cenę.',
+            'price.numeric' => 'Cena musi być liczbą.',
+            'price.min' => 'Cena musi wynosić co najmniej 1 zł.',
+            'description.min' => 'Opis musi mieć co najmniej 30 znaków.',
+        ]);
+
+        $product->update($validated);
+
+        return redirect()
+            ->route('products.index')
+            ->with('message', 'Produkt został zaktualizowany.');
     }
 
     /**

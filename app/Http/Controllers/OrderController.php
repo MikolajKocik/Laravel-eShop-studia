@@ -23,12 +23,12 @@ class OrderController extends Controller
     {
         $cart = session()->get('cart');
 
-        if(!$cart) {
+        if (!$cart) {
             return redirect()->back()->with('error', 'Twój koszyk jest pusty!');
         }
 
         $total = 0;
-        foreach($cart as $item) {
+        foreach ($cart as $item) {
             $total += $item['price'] * $item['quantity'];
         }
 
@@ -38,7 +38,7 @@ class OrderController extends Controller
             'status' => 'Nowe'
         ]);
 
-        foreach($cart as $id => $item) {
+        foreach ($cart as $id => $item) {
             OrderItem::create([
                 'order_id' => $order->id,
                 'product_id' => $id,
@@ -50,5 +50,18 @@ class OrderController extends Controller
         session()->forget('cart');
 
         return redirect()->route('orders.index')->with('message', 'Dziękujemy za złożenie zamówienia!');
+    }
+
+    public function active()
+    {
+        $activeStatuses = ['Nowe', 'W realizacji', 'Wysłane'];
+
+        $orders = Order::query()
+            ->whereIn('status', $activeStatuses)
+            ->with(['items.product', 'user'])
+            ->latest()
+            ->get();
+
+        return view('orders.active', compact('orders'));
     }
 }

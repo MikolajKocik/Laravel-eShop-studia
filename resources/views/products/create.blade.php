@@ -1,14 +1,14 @@
 @extends('layout')
 
-@section('title') 
-    Dodaj Nowy Produkt 
+@section('title')
+    Dodaj Nowy Produkt
 @endsection
 
 @section('body')
     <h1 class="text-xl font-bold mb-4">Dodawanie produktu</h1>
 
     <form action="{{ route('products.store') }}" method="POST" class="max-w-lg space-y-4">
-        @csrf 
+        @csrf
 
         <div>
             <label class="block mb-1">Nazwa produktu:</label>
@@ -27,7 +27,16 @@
 
         <div>
             <label class="block mb-1">Cena (zł):</label>
-            <input type="number" step="0.01" name="price" value="{{ old('price') }}" class="w-full border rounded p-2">
+            <input type="number"
+                step="0.01"
+                min="1"
+                name="price"
+                value="{{ old('price') }}"
+                class="w-full border rounded p-2 @error('price') border-red-500 @enderror">
+
+            @error('price')
+                <span class="text-red-500 text-xs">{{ $message }}</span>
+            @enderror
         </div>
 
         <div>

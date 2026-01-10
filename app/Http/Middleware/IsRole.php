@@ -18,6 +18,9 @@ class IsAdmin
         if ($request->user() && $request->user()->is_admin) {
             return $next($request);
         }
+        if ($request->user() && $request->user()->is_asistant) {
+            return $next($request);
+        }
         abort(403, 'Unauthorized action.');
     }
 }

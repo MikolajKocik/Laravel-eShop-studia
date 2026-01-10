@@ -30,7 +30,7 @@
                     @foreach($categories as $category)
                         <li class="p-4 flex justify-between items-center hover:bg-gray-50">
                             <span class="font-medium">{{ $category->name }}</span>
-                            
+
                             @auth
                                 @if(auth()->user()->is_admin)
                                     <form action="{{ route('categories.delete', $category->id) }}" method="POST" onsubmit="return confirm('Czy na pewno chcesz usunąć tę kategorię?')">
@@ -48,9 +48,8 @@
             @endif
         </div>
 
-        <!-- Add Category Form (Admin only) -->
         @auth
-            @if(auth()->user()->is_admin)
+            @if(auth()->user()->role === 'admin')
                 <div>
                     <div class="bg-gray-50 p-6 rounded-lg border shadow-sm">
                         <h2 class="text-xl font-semibold mb-4">Dodaj Nową Kategorię</h2>
@@ -58,7 +57,11 @@
                             @csrf
                             <div class="mb-4">
                                 <label for="name" class="block text-gray-700 font-medium mb-2">Nazwa Kategorii</label>
-                                <input type="text" name="name" id="name" class="w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 p-2" required>
+                                <input type="text" name="name" id="name" value="{{ old('name') }}" class="w-full border-gray-300 rounded-md shadow-sm p-2
+                                    @error('name')border-red-500 @enderror" required>
+                                @error('name')
+                                    <span class="text-red-500 text-sm">{{ $message }}</span>
+                                @enderror
                             </div>
                             <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition">
                                 Dodaj Kategorię

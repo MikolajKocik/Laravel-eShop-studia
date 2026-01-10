@@ -1,0 +1,304 @@
+[
+    {
+        "name": "Klasyczne skórzane kozaki",
+        "description": "Wysokie skórzane kozaki z ocieplaną podszewką.",
+        "price": 599.99,
+        "category_id": 1,
+        "image_url": "https://butosklep.pl/hpeciai/f7eb0382a590db88d3ce905f9388111a/pol_pm_Skorzane-Kozaki-Damskie-Przed-Kolano-Lewski-3615-Czarne-33655_5.webp"
+    },
+    {
+        "name": "Zimowe kozaki Comfort",
+        "description": "Ciepłe kozaki zaprojektowane na chłodne dni.",
+        "price": 649.99,
+        "category_id": 1,
+        "image_url": "https://neptunobuwie.pl/hpeciai/e88b56977dee3a1a9b4f36375c67e778/pol_pl_Kozaki-AXEL-Comfort-4468-H-Czarne-zimowe-ocieplane-3371_1.jpg"
+    },
+    {
+        "name": "Miejskie wysokie kozaki",
+        "description": "Stylowe wysokie kozaki do codziennego użytku.",
+        "price": 579.99,
+        "category_id": 1,
+        "image_url": "https://stili.pl/hpeciai/bfeffb1a37572f779427870476102edc/pol_pl_BRAZOWE-SKORZANE-WYSOKIE-KOZAKI-ELASTYCZNE-OFICERKI-MILAN-8353_3.jpg"
+    },
+    {
+        "name": "Eleganckie kozaki",
+        "description": "Eleganckie kozaki odpowiednie do formalnych stylizacji.",
+        "price": 699.99,
+        "category_id": 1,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFn33bMYO14WKDy4PRXGi8makrLVEDWxuCjQ&s"
+    },
+    {
+        "name": "Wytrzymałe skórzane kozaki",
+        "description": "Solidne kozaki wykonane z grubej skóry.",
+        "price": 629.99,
+        "category_id": 1,
+        "image_url": "https://butosklep.pl/hpeciai/c1c4f84959bee9742222a1149e700c29/27526_3.jpg"
+    },
+    {
+        "name": "Klasyczne zimowe kozaki",
+        "description": "Klasyczne zimowe kozaki z antypoślizgową podeszwą.",
+        "price": 589.99,
+        "category_id": 1,
+        "image_url": "https://obuwiejoanna.pl/119185-thickbox_default/ocieplane-klasyczne-kozaki-damskie.jpg"
+    },
+    {
+        "name": "Premium wysokie kozaki",
+        "description": "Kozaki premium ze wzmocnionym obcasem.",
+        "price": 749.99,
+        "category_id": 1,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBxAFjAZtzxtoYlHfXkoatVveuIO3gPhjN-A&s"
+    },
+    {
+        "name": "Kozaki Comfort Fit",
+        "description": "Wygodne kozaki idealne na długie spacery.",
+        "price": 569.99,
+        "category_id": 1,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZIdYuW0bEpXDA4sK3qkcGPt4v4QN5Vg7Qrg&s"
+    },
+    {
+        "name": "Kozaki na co dzień",
+        "description": "Uniwersalne kozaki do codziennego noszenia.",
+        "price": 549.99,
+        "category_id": 1,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC2w2LegpVky6RHlPswCcw2qDqdOlvDEYHTg&s"
+    },
+    {
+        "name": "Luksusowe skórzane kozaki",
+        "description": "Luksusowe kozaki z miękkim skórzanym wykończeniem.",
+        "price": 799.99,
+        "category_id": 1,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8QwB7QRn15Z3W3Vtl2vxBp6fXh7y0UYHX5w&s"
+    },
+
+    {
+        "name": "Górskie buty trekkingowe",
+        "description": "Wytrzymałe buty przeznaczone na górskie szlaki.",
+        "price": 699.99,
+        "category_id": 2,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGdnozDwFQzCerOcaEVSzIrcz4vkqdSTXL4w&s"
+    },
+    {
+        "name": "Buty trekkingowe Trail Master",
+        "description": "Niezawodne buty na długie wędrówki.",
+        "price": 659.99,
+        "category_id": 2,
+        "image_url": "https://image.ceneostatic.pl/data/products/27944452/p-jack-wolfskin-trail-master-texapore-buty-trekkingowe-szary.jpg"
+    },
+    {
+        "name": "Profesjonalne buty outdoorowe",
+        "description": "Profesjonalne buty trekkingowe z przyczepną podeszwą.",
+        "price": 749.99,
+        "category_id": 2,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5rvQspxLj5gN6Pc9jmUjnv9czPNRKNZhUeQ&s"
+    },
+    {
+        "name": "Buty na ekstremalny teren",
+        "description": "Buty zaprojektowane do ekstremalnych warunków terenowych.",
+        "price": 799.99,
+        "category_id": 2,
+        "image_url": "https://www.2forest.pl/hpeciai/0bde4184d1f41f6abca47cd775bc4a8d/pol_pl_Buty-ochronne-Zugspitze-Extreme-Class-2-chroniace-przed-pila-lancuchowa-790_1.jpg"
+    },
+    {
+        "name": "Buty trekkingowe całoroczne",
+        "description": "Odporne na warunki atmosferyczne buty trekkingowe.",
+        "price": 689.99,
+        "category_id": 2,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvPfhz07-sKve_t7pHZqqkF_EhoOtu6nraPQ&s"
+    },
+
+    {
+        "name": "Letnie sandały Comfort",
+        "description": "Lekkie sandały idealne na lato.",
+        "price": 199.99,
+        "category_id": 3,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgJxgN_K2bGakuUHlZe4RuTL0_XZ4cnyMgBg&s"
+    },
+    {
+        "name": "Sandały na plażę",
+        "description": "Sandały doskonałe na spacery po plaży.",
+        "price": 179.99,
+        "category_id": 3,
+        "image_url": "https://butynalata.pl/hpeciai/0462d7002358967dd7d2719f25336ccc/pol_pl_Sandaly-Ipanema-82855-szary-wsuwane-sandaly-na-plaze-BREEZY-SANDAL-gumowe-3062_1.webp"
+    },
+
+    {
+        "name": "Miejskie sneakersy",
+        "description": "Nowoczesne sneakersy do codziennego użytku.",
+        "price": 349.99,
+        "category_id": 4,
+        "image_url": "https://basketo.pl/hpeciai/01b3db3eda78283ef71ef3ae7e4f249f/pol_pm_Buty-sportowe-sneakersy-miejskie-trekkingowe-Magnum-Madson-II-Low-Czarne-43335_1.jpg"
+    },
+    {
+        "name": "Sneakersy Sport Flex",
+        "description": "Elastyczne sneakersy sportowe.",
+        "price": 379.99,
+        "category_id": 4,
+        "image_url": "https://img.modivo.cloud/product(8/d/4/4/8d44da408bbfee05692165ce2bd790fbec3fb37e_26_0197976249271.jpg,jpg)/skechers-sneakersy-bobs-sport-sparrow-flex-instant-clout-117580-ofwt-bialy-0000304111037.jpg"
+    },
+    {
+        "name": "Kozaki zimowe Arctic Warm",
+        "description": "Bardzo ciepłe kozaki zimowe z grubą podszewką.",
+        "price": 719.99,
+        "category_id": 1,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtiy-MTsKnr24XbcQyAJ26TDpeeG2mx8gp9w&s"
+    },
+    {
+        "name": "Kozaki miejskie Slim Fit",
+        "description": "Smukłe kozaki idealne do miejskich stylizacji.",
+        "price": 599.99,
+        "category_id": 1,
+        "image_url": "https://www.lubiebuty.pl/180085-medium_default/czarne-kozaki-na-niskim-slupku-eunola.jpg"
+    },
+    {
+        "name": "Kozaki skórzane Classic Line",
+        "description": "Ponadczasowe kozaki z naturalnej skóry.",
+        "price": 649.99,
+        "category_id": 1,
+        "image_url": "https://zapato.com.pl/img/imagecache/21001-22000/680x850_product_media_21001-22000_1406_czarny_lico-j.webp"
+    },
+
+    {
+        "name": "Buty trekkingowe Alpine Trek",
+        "description": "Buty trekkingowe stworzone na górskie wyprawy.",
+        "price": 739.99,
+        "category_id": 2,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhmwI3gD0_psAtkRlEKCESQmTipR9M7mxSpA&s"
+    },
+    {
+        "name": "Buty trekkingowe Rock Grip",
+        "description": "Trekkingowe buty z doskonałą przyczepnością.",
+        "price": 769.99,
+        "category_id": 2,
+        "image_url": "https://sneakasso.pl/images/sr008/8000-9000/Buty-do-brodzenia-Patagonia-Rock-Grip-79325_%5B8689%5D_780.jpg"
+    },
+    {
+        "name": "Buty outdoorowe Rain Shield",
+        "description": "Wodoodporne buty outdoorowe na deszczowe dni.",
+        "price": 709.99,
+        "category_id": 2,
+        "image_url": "https://www.butyjana.pl/media/catalog/product/webp/2100381102/columbia-moritza-shield-omni-heat-2100381102-001.webp"
+    },
+
+    {
+        "name": "Sandały trekkingowe Adventure",
+        "description": "Wytrzymałe sandały na aktywne lato.",
+        "price": 239.99,
+        "category_id": 3,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZjoVI9pa92eXCQdHvlmrZk7PS3Zel8C7rvQ&s"
+    },
+    {
+        "name": "Sandały miejskie Urban Breeze",
+        "description": "Lekkie sandały idealne na ciepłe dni w mieście.",
+        "price": 189.99,
+        "category_id": 3,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDE-GiFHVQyc1nIyYrU_WKE1gLmxJnAywV4g&s"
+    },
+    {
+        "name": "Sandały skórzane Classic Sand",
+        "description": "Klasyczne skórzane sandały na lato.",
+        "price": 249.99,
+        "category_id": 3,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk3n-otFnpBilQfkpYDDqmlIe8jVRGnoIlOQ&s"
+    },
+
+    {
+        "name": "Sneakersy City Runner",
+        "description": "Miejskie sneakersy inspirowane bieganiem.",
+        "price": 389.99,
+        "category_id": 4,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUkU6Va3qUY5mM64ZUYFT_GAH4V99l59XiUg&s"
+    },
+    {
+        "name": "Sneakersy Street Motion",
+        "description": "Sneakersy w dynamicznym stylu ulicznym.",
+        "price": 359.99,
+        "category_id": 4,
+        "image_url": "https://justdance.com.pl/wp-content/uploads/2023/02/4605818966e78f1711a414672582d07b.jpg"
+    },
+    {
+        "name": "Sneakersy Air Comfort",
+        "description": "Sneakersy z naciskiem na komfort noszenia.",
+        "price": 419.99,
+        "category_id": 4,
+        "image_url": "https://basketzone.pl/zdjecia/2021/07/10/307/57/NIKE_AIR_JORDAN_1_RETRO_HIGH_ZOOM_AIR_COMFORT_HIGH_TO_MY_FIRST_COACH.jpg"
+    },
+
+    {
+        "name": "Trampki Classic White",
+        "description": "Białe trampki pasujące do każdej stylizacji.",
+        "price": 199.99,
+        "category_id": 5,
+        "image_url": "https://www.butsklep.pl/files/sc_images/product/full_img_260843.jpg"
+    },
+    {
+        "name": "Trampki Street Black",
+        "description": "Czarne trampki w stylu streetwear.",
+        "price": 219.99,
+        "category_id": 5,
+        "image_url": "https://image.ceneostatic.pl/data/products/113315757/p-converse-trampki-ctas-street-slip-671650c-black-mason-storm-wind.jpg"
+    },
+
+    {
+        "name": "Botki skórzane Urban Classic",
+        "description": "Skórzane botki do codziennych stylizacji miejskich.",
+        "price": 489.99,
+        "category_id": 6,
+        "image_url": "https://www.tradeinn.com/f/13851/138519043/urban-classics-urban-classic-winter-buty.webp"
+    },
+    {
+        "name": "Kozaki z ociepleniem Wool Warm",
+        "description": "Skórzane kozaki z ciepłym ociepleniem na zimę.",
+        "price": 679.99,
+        "category_id": 1,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTALA7_HOMeI_Z8iJpwqysfBXcLnOisUtR9NQ&s"
+    },
+    {
+        "name": "Kozaki na stabilnym obcasie City Heel",
+        "description": "Kozaki na stabilnym obcasie do eleganckich stylizacji.",
+        "price": 709.99,
+        "category_id": 1,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqk3w-BVshngeE2UWaXUHRMWy6XykttHSI-g&s"
+    },
+    {
+        "name": "Buty trekkingowe Summit Guard",
+        "description": "Buty trekkingowe z mocną podeszwą na wymagające trasy.",
+        "price": 819.99,
+        "category_id": 2,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMicaj8PAvE91FhLIXIR7YRzOvwuuWR5rJMw&s"
+    },
+    {
+        "name": "Buty trekkingowe Gravel Runner",
+        "description": "Buty outdoorowe do szutrowych i leśnych ścieżek.",
+        "price": 699.99,
+        "category_id": 2,
+        "image_url": "https://a.allegroimg.com/original/11330c/b67d13c84118a83b16f119195d01/Adidas-Terrex-Agravic-3-Trail-Meskie-Buty-do-biegania-Trekking-gravel-Gory"
+    },
+    {
+        "name": "Sandały na rzepy Easy Strap",
+        "description": "Sandały z regulacją na rzepy dla maksymalnej wygody.",
+        "price": 199.99,
+        "category_id": 3,
+        "image_url": "https://obuwiejoanna.pl/127719-thickbox_default/lekkie-sportowe-sandaly-damskie-z-gumkami-na-rzepy-0.jpg"
+    },
+    {
+        "name": "Sandały plażowe Sea Walk",
+        "description": "Lekkie sandały na plażę i wakacyjne spacery.",
+        "price": 169.99,
+        "category_id": 3,
+        "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST85tQjb5QA2y52MOfJhpj-rqbbObD1Ffhgg&s"
+    },
+    {
+        "name": "Sneakersy Lightweight Sprint",
+        "description": "Lekkie sneakersy do codziennego biegania i spacerów.",
+        "price": 399.99,
+        "category_id": 4,
+        "image_url": "https://m.media-amazon.com/images/I/51OYoohp2YL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+        "name": "Sneakersy Retro Runner",
+        "description": "Sneakersy inspirowane klasycznym stylem biegowym.",
+        "price": 379.99,
+        "category_id": 4,
+        "image_url": "https://img2.ans-media.com/i/840x1260/AW25-OBM03P-99A_F1.webp?v=1756734171"
+    }
+]
