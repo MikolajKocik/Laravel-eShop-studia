@@ -7,18 +7,33 @@ use App\Models\Category;
 
 class CategoryController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $categories = Category::all();
         return view('categories.index', compact('categories'));
     }
 
-    public function store(Request $request) {
-        $validated = $request->validate(['name' => 'required|unique:categories|max:255']);
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => [
+                'required',
+                'string',
+                'max:255',
+                'regex:/^[^\d]+$/'
+            ],
+        ], [
+            'name.required' => 'Nazwa kategorii jest wymagana.',
+            'name.regex' => 'Nazwa kategorii nie może zawierać cyfr.',
+        ]);
+
         Category::create($validated);
-        return back()->with('message', 'Kategoria dodana!');
+
+        return redirect()->back()->with('message', 'Kategoria została dodana.');
     }
 
-    public function destroy(Category $category) {
+    public function destroy(Category $category)
+    {
         $category->delete();
         return back()->with('message', 'Kategoria usunięta!');
     }

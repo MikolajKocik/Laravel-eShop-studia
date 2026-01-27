@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+        {{ __('Zapomniałeś hasła? Nie ma problemu. Podaj nam swój adres e-mail, a my wyślemy do ciebie link do resetowania hasła, który pomoże ci wybrać nowe.') }}
     </div>
 
     <!-- Session Status -->
@@ -18,7 +18,7 @@
 
         <div class="flex items-center justify-end mt-4">
             <x-primary-button>
-                {{ __('Email Password Reset Link') }}
+                {{ __('Wyślij link do resetu hasła') }}
             </x-primary-button>
         </div>
     </form>
